@@ -2,6 +2,24 @@
   text-align: center;
 }
 
+.App-background {
+  position: relative;
+  background-image: url(''); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: move-background 20s linear infinite;
+  min-height: 100vh;
+}
+
+@keyframes move-background {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +53,14 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+body {
+  margin: 0;
+  padding-top: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }

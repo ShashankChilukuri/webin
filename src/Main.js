@@ -14,7 +14,7 @@ const Main = () => {
     return (
         <div>
             <Helmet>
-                <title>WebIn - Weaving the Future of the Web</title>
+                <title>Webin - Weaving the Future of the Web</title>
                 <meta name="description" content="Welcome to WebIn, a freelancing platform for web development, deployment, and maintenance services." />
                 <meta name="keywords" content="web development, website deployment, website maintenance, freelancing" />
                 <link rel="canonical" href="https://www.yourwebsite.com" />

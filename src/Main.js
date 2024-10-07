@@ -30,7 +30,7 @@ const Main = () => {
                 <div className="context">
                     <div className="row align-items-center">
                         <div className="col-12 col-md-6 text-center">
-                            <h1 className="text-blue-600 mb-4 text-4xl animated-text">Welcome to WebIn</h1>
+                            <h1 className="text-blue-600 mb-4 text-4xl animated-text">Welcome to Webin</h1>
                             
                             <p className="text-black text-lg mb-4">Your gateway to innovative web solutions</p>
                             

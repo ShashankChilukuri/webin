@@ -18,7 +18,7 @@ const Navbar = () => {
                         alt="WebIn Logo"
                     />
                     <div className="ml-3">
-                        <span className="text-5xl font-bold text-blue-600 transition-colors duration-300 hover:text-blue-800">WebIn</span>
+                        <span className="text-5xl font-bold text-blue-600 transition-colors duration-300 hover:text-blue-800">Webin</span>
                         <p className="text-lg text-gray-600">Weaving the Future of the Web</p>
                     </div>
                 </div>

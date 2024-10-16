@@ -11,6 +11,7 @@ const ContactForm = () => {
         subject: '',
         message: '',
     });
+    const [loading, setLoading] = useState(false);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -19,6 +20,7 @@ const ContactForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        setLoading(true);
 
         emailjs.send(
             'service_owtrzwj',
@@ -40,6 +42,9 @@ const ContactForm = () => {
         .catch((error) => {
             console.error('Failed to send email:', error);
             alert('Failed to send form. Please try again later.');
+        })
+        .finally(() => {
+            setLoading(false);
         });
     };
 
@@ -108,7 +113,9 @@ const ContactForm = () => {
                             ></textarea>
                         </div>
                         <div className="form-group full-width">
-                            <button type="submit" className="btn-submit">Submit</button>
+                            <button type="submit" className="btn-submit">
+                                {loading ? <div className="loader"></div> : 'Submit'}
+                            </button>
                         </div>
                     </form>
                 </div>

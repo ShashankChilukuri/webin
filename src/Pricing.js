@@ -8,20 +8,22 @@ import 'slick-carousel/slick/slick-theme.css';
 const Pricing = () => {
     const settings = {
         dots: true,
-        infinite: false,
-        speed: 1500,
+        infinite: true,
+        speed: 1200,
         slidesToShow: 3,
         slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
         responsive: [
             {
                 breakpoint: 1024,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 2,
+                    slidesToScroll: 1,
                 },
             },
             {
-                breakpoint: 600,
+                breakpoint: 768,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
@@ -32,19 +34,18 @@ const Pricing = () => {
 
     return (
         <div className="container py-5">
-            <h2 className="text-center text-primary mb-4">Pricing Plans</h2>
-            <p className="text-center mb-4">Choose the best plan that suits your needs.</p>
+            <h2 className="text-center display-4 text-primary mb-4">Our Pricing Plans</h2>
+            <p className="text-center lead mb-5">Choose a plan that perfectly fits your needs</p>
             <Slider {...settings}>
-                
                 <div>
-                    <div className="card shadow-sm">
-                        <div className="card-body">
-                            <h5 className="card-title">Basic Static Plan</h5>
-                            <p className="card-text">Perfect for small projects.</p>
-                            <h3 className="text-primary">₹ 2,999</h3>
-                            <ul className="list-unstyled">
+                    <div className="card shadow-lg h-100">
+                        <div className="card-body text-center">
+                            <h5 className="card-title font-weight-bold">Basic Static Plan</h5>
+                            <h3 className="text-primary font-weight-bold">₹ 2,999</h3>
+                            <p className="card-text">Ideal for small businesses or personal projects.</p>
+                            <ul className="list-unstyled my-3">
                                 <li>3 Pages Static Website</li>
-                                <li>Lifetime 24/7 Free Hosting Support</li>
+                                <li>Lifetime Hosting Support</li>
                                 <li>Free SSL Certificates</li>
                                 <li>SEO Friendly & Responsive</li>
                                 <li>Inquiry Form</li>
@@ -54,14 +55,14 @@ const Pricing = () => {
                 </div>
 
                 <div>
-                    <div className="card shadow-sm">
-                        <div className="card-body">
-                            <h5 className="card-title">Premium Static Plan</h5>
-                            <p className="card-text">For advanced projects.</p>
-                            <h3 className="text-primary">₹ 5,999</h3>
-                            <ul className="list-unstyled">
+                    <div className="card shadow-lg h-100">
+                        <div className="card-body text-center">
+                            <h5 className="card-title font-weight-bold">Premium Static Plan</h5>
+                            <h3 className="text-primary font-weight-bold">₹ 5,999</h3>
+                            <p className="card-text">For advanced and larger projects needing more.</p>
+                            <ul className="list-unstyled my-3">
                                 <li>10 Pages Static Website</li>
-                                <li>Lifetime 24/7 Free Hosting Support</li>
+                                <li>Lifetime Hosting Support</li>
                                 <li>Free SSL Certificates</li>
                                 <li>SEO Friendly & Responsive</li>
                                 <li>Inquiry Form</li>
@@ -70,17 +71,16 @@ const Pricing = () => {
                     </div>
                 </div>
 
-                
                 <div>
-                    <div className="card shadow-sm">
-                        <div className="card-body">
-                            <h5 className="card-title">Basic Dynamic Plan</h5>
-                            <p className="card-text">Great for startups.</p>
-                            <h3 className="text-primary">₹ 8,999</h3>
-                            <ul className="list-unstyled">
+                    <div className="card shadow-lg h-100">
+                        <div className="card-body text-center">
+                            <h5 className="card-title font-weight-bold">Basic Dynamic Plan</h5>
+                            <h3 className="text-primary font-weight-bold">₹ 8,999</h3>
+                            <p className="card-text">Perfect for startups with growing needs.</p>
+                            <ul className="list-unstyled my-3">
                                 <li>3 Pages Dynamic Website</li>
                                 <li>1 Year Free Domain Name</li>
-                                <li>Lifetime 24/7 Free Hosting Support</li>
+                                <li>Lifetime Hosting Support</li>
                                 <li>Free SSL Certificates</li>
                                 <li>SEO Friendly & Responsive</li>
                                 <li>Inquiry Form</li>
@@ -90,18 +90,17 @@ const Pricing = () => {
                 </div>
 
                 <div>
-                    <div className="card shadow-sm">
-                        <div className="card-body">
-                            <h5 className="card-title">Premium Dynamic Plan</h5>
-                            <p className="card-text">For established businesses.</p>
-                            <h3 className="text-primary">₹ 17,999</h3>
-                            <ul className="list-unstyled">
+                    <div className="card shadow-lg h-100">
+                        <div className="card-body text-center">
+                            <h5 className="card-title font-weight-bold">Premium Dynamic Plan</h5>
+                            <h3 className="text-primary font-weight-bold">₹ 17,999</h3>
+                            <p className="card-text">Best for businesses with higher demand.</p>
+                            <ul className="list-unstyled my-3">
                                 <li>10 Pages Dynamic Website</li>
+                                <li>Unlimited Image & Video Uploads</li>
                                 <li>1 Year Free Domain Name</li>
-                                <li>Lifetime 24/7 Free Hosting Support</li>
-                                <li>Unlimited Images & Videos Upload</li>
+                                <li>Live Chat & Payment Integration</li>
                                 <li>Free SSL Certificates</li>
-                                <li>Live Chat & Payment Gateway Integration</li>
                                 <li>Inquiry Form</li>
                             </ul>
                         </div>
@@ -109,11 +108,10 @@ const Pricing = () => {
                 </div>
             </Slider>
 
-            
             <div className="text-center mt-5">
-                <p>If you don't find your requirements, <strong>get a quote</strong> by sending your requirements!</p>
+                <p>Need a custom solution? <strong>Contact us</strong> for a personalized quote!</p>
                 <button 
-                    className="btn btn-primary" 
+                    className="btn btn-primary px-5 py-3" 
                     onClick={() => window.location.href = '/#contact'}
                 >
                     Request a Quote

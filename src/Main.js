@@ -11,6 +11,22 @@ import developmentHome from './Images/d4.jpg';
 import ContactForm from './contactform';
 
 const Main = () => {
+    useEffect(() => {
+        // Add Google Tag Manager script
+        const script = document.createElement('script');
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-L67E5B917Z';
+        script.async = true;
+        document.head.appendChild(script);
+    
+        const inlineScript = document.createElement('script');
+        inlineScript.innerHTML = `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-L67E5B917Z');
+        `;
+        document.head.appendChild(inlineScript);
+      }, []);
     return (
         <div>
             <Helmet>

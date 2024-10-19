@@ -9,6 +9,7 @@ import deploy from './Images/deployment.png';
 import web from './Images/web_development.jpeg';
 import developmentHome from './Images/d4.jpg';
 import ContactForm from './contactform';
+import { useEffect } from 'react';
 
 const Main = () => {
     useEffect(() => {
